@@ -6,9 +6,11 @@
 /*   By: ingjimen <ingjimen@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:30:56 by ingjimen          #+#    #+#             */
-/*   Updated: 2024/10/31 10:26:49 by ingjimen         ###   ########.fr       */
+/*   Updated: 2024/11/07 08:57:17 by ingjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {

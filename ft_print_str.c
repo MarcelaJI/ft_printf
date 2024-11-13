@@ -6,20 +6,15 @@
 /*   By: ingjimen <ingjimen@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:33:03 by ingjimen          #+#    #+#             */
-/*   Updated: 2024/10/31 10:51:22 by ingjimen         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:34:08 by ingjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 int	ft_print_str(char *str)
 {
-	int	length;
-
-	length = 0;
 	if (!str)
 		return (ft_print_str("(null)"));
-	while (str[length])
-	{
-		write (1, &str[length++], 1);
-	}
-	return (length);
+	return (write (1, str, ft_strlen(str)));
 }

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ingjimen <ingjimen@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 09:32:44 by ingjimen          #+#    #+#             */
-/*   Updated: 2024/11/13 11:20:26 by ingjimen         ###   ########.fr       */
+/*   Created: 2024/11/11 12:00:05 by ingjimen          #+#    #+#             */
+/*   Updated: 2024/11/11 12:06:22 by ingjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_ptr(void *ptr)
+size_t	ft_strlen(const char *str)
 {
-	long	n;
-	int		count;
+	size_t	i;
 
-	count = 0;
-	if (ptr == NULL)
+	i = 0;
+	while (str[i])
 	{
-		count += write (1, "(nil)", 5);
-		return (count);
+		i++;
 	}
-	n = (unsigned long)ptr;
-	count += ft_print_str("0x");
-	count += ft_print_hex(n, 0);
-	return (count);
+	return (i);
 }
