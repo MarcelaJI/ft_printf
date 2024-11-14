@@ -15,7 +15,7 @@
 static int	typecheck(char c, va_list args)
 {
 	if (c == '%')
-		return (write(1, "%%", 1));
+		return (write(1, "%", 1));
 	else if (c == 'i' || c == 'd')
 		return (ft_print_int(va_arg(args, int)));
 	else if (c == 's')
